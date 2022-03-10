@@ -37,9 +37,9 @@ export const Pokedex = () => {
     const [ pattern, setPattern ] = useState('');
 
     const handleInputChange = (e) => {
-        setPattern(e.target.value);
+        setPattern(e.target.value.toLowerCase());
     }
-  
+
     useEffect( () => {
         axios
             .get(`https://pokeapi.co/api/v2/pokemon?limit=2000`)
